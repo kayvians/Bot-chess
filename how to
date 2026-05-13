@@ -1,0 +1,48 @@
+# ♟️ Stockfish-Powered Chess Engine Assistant
+
+An interactive Command Line Interface (CLI) chess assistant built in Python. This project utilizes the **Stockfish Engine** via the Universal Chess Interface (UCI) protocol to analyze positions and execute optimal moves for the user in real-time, while allowing manual input for the opponent's moves.
+
+## 🚀 Key Features
+* **Automated Gameplay:** Computes and executes the best moves for your side automatically.
+* **Engine Evaluation:** Displays real-time position scoring using Stockfish.
+* **Interactive CLI Management:** Custom controls for in-game `Undo` functionality and clean exits.
+* **Configurable Constraints:** Custom engine depth and calculation time limits per move.
+
+## 🛠️ Tech Stack & Dependencies
+* **Core Language:** Python 3
+* **Libraries:** `python-chess`
+* **Chess Engine:** Stockfish (UCI compatible executable)
+
+## 📦 Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone github.com
+   cd REPO_NAME
+   ```
+
+2. **Install the required Python library:**
+   ```bash
+   pip install python-chess
+   ```
+
+3. **Download Stockfish Engine:**
+   * Download the executable for your OS from the official [Stockfish Website](https://stockfishchess.org).
+   * Update the `path_engine` variable in `main.py` with your local Stockfish executable absolute path:
+     ```python
+     path_engine = r"YOUR_LOCAL_STOCKFISH_PATH"
+     ```
+
+## 🎮 How to Run
+Execute the script using python:
+```bash
+python main.py
+```
+
+## 🕹️ In-Game Controls
+* `1` -> **Undo:** Rollback the last 2 moves (your bot move and opponent move).
+* `2` -> **Exit:** Gracefully terminate the Stockfish engine process and quit the game.
+* Enter standard SAN notation (e.g., `e4`, `Nf3`, `O-O`) for the opponent's turn.
+
+## 📝 License
+This project is open-source and available under the MIT License.
